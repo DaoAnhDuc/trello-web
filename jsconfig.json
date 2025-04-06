@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src", // Chỉ định thư mục gốc là 'src'
+    "paths": {
+      "~/*": ["*"] // Định nghĩa alias ~ trỏ tới thư mục src
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
