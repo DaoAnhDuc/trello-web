@@ -8,10 +8,18 @@ const BoardContent = () => {
         bgcolor: (theme) => (theme.palette.mode === "dark" ? "#34495e" : "#1976d2"),
         height: (theme) => `calc(100% - ${theme.trello.appBarHeight} - ${theme.trello.boardBarHeight})`,
         display: "flex",
-        alignItems: "center",
+        p: 2,
       }}
     >
-      Box Content
+      <Box
+        sx={{
+          minWidth: 300,
+          maxWidth: 300,
+          bgcolor: (theme) => (theme.palette.mode === "dark" ? "#333643" : "#ebecf0"),
+          borderRadius: "6px",
+          height: 400,
+        }}
+      ></Box>
     </Box>
   );
 };

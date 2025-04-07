@@ -62,7 +62,12 @@ const BoardBar = () => {
               width: 36,
               height: 36,
               fontSize: '1.2rem',
-              border: 'none'
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              '&:first-of-type': {
+                bgcolor: '#a4b0de'
+              }
             },
           }}
         >
