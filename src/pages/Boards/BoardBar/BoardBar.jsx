@@ -1,8 +1,9 @@
 import { Dashboard, VpnLock, AddToDrive, Bolt, Filter, FilterList, PersonAdd } from "@mui/icons-material";
 import { Avatar, AvatarGroup, Box, Button, Chip, Tooltip } from "@mui/material";
 import React from "react";
+import { capitalizeFirstLetter } from "~/utils/capitalize-first-letter";
 
-const BoardBar = () => {
+const BoardBar = ({board}) => {
   const MENU_STYLE = {
     color: "white",
     bgcolor: 'transparent',
@@ -26,14 +27,12 @@ const BoardBar = () => {
         justifyContent: "space-between",
         overflowX: "auto",
         overflowY: "hidden",
-        borderBottom: "1px solid",
-        borderColor: (theme) => (theme.palette.mode === "dark" ? "#2c3e50" : "#1565c0"),
         px: 2,
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Chip icon={<Dashboard />} label="TrungQuanDev MERN STACK PRO" clickable sx={MENU_STYLE}></Chip>
-        <Chip icon={<VpnLock />} label="Pubic/Private Workspace" clickable sx={MENU_STYLE}></Chip>
+        <Chip icon={<Dashboard />} label={board?.title} clickable sx={MENU_STYLE}></Chip>
+        <Chip icon={<VpnLock />} label={capitalizeFirstLetter(board?.type)} clickable sx={MENU_STYLE}></Chip>
         <Chip icon={<AddToDrive />} label="Add to Google Drive" clickable sx={MENU_STYLE}></Chip>
         <Chip icon={<Bolt />} label="AUTOMATION" clickable sx={MENU_STYLE}></Chip>
         <Chip icon={<FilterList />} label="Filters" clickable sx={MENU_STYLE}></Chip>
@@ -44,10 +43,10 @@ const BoardBar = () => {
           variant="outlined"
           sx={{
             color: "white",
-            box: 'white',
+            box: "white",
             borderColor: "white",
-            border:'none',
-            boxShadow: '0 0 0 0.5px white',
+            border: "none",
+            boxShadow: "0 0 0 0.5px white",
             "&:hover": {
               borderColor: "white",
             },
@@ -61,13 +60,13 @@ const BoardBar = () => {
             "& .MuiAvatarGroup-avatar": {
               width: 36,
               height: 36,
-              fontSize: '1.2rem',
-              border: 'none',
-              color: 'white',
-              cursor: 'pointer',
-              '&:first-of-type': {
-                bgcolor: '#a4b0de'
-              }
+              fontSize: "1.2rem",
+              border: "none",
+              color: "white",
+              cursor: "pointer",
+              "&:first-of-type": {
+                bgcolor: "#a4b0de",
+              },
             },
           }}
         >

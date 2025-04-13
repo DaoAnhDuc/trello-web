@@ -2,7 +2,7 @@ import AppsIcon from "@mui/icons-material/Apps";
 import { Badge, Box, Button, InputAdornment, SvgIcon, TextField, Tooltip, Typography } from "@mui/material";
 import { ReactComponent as TrelloIcon } from "~/assets/trello.svg";
 
-import ModeSelect from "../ModeSelect";
+import ModeSelect from "../ModeSelect/ModeSelect";
 import Workspaces from "./Menus/Workspaces";
 import Recent from "./Menus/Recent";
 import Started from "./Menus/Started";
